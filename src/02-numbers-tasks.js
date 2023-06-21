@@ -235,7 +235,7 @@ function isPrime(num) {
  */
 function toNumber(value, def) {
   const input = value;
-  return (typeof Number(input) === 'number' && !isNaN(input)) ? Number(input) : def;
+  return (typeof Number(input) === 'number' && !Number.isNaN(input)) ? Number(input) : def;
 }
 
 module.exports = {

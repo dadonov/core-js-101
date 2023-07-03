@@ -271,9 +271,7 @@ function getSecondItems(arr) {
  *  [ 1,2,3,4,5 ] => [ 1, 2,2, 3,3,3, 4,4,4,4, 5,5,5,5,5 ]
  */
 function propagateItemsByPositionIndex(arr) {
-  return arr.flatMap((item, index) =>
-    Array.from({ length: index + 1 }).fill(item)
-  );
+  return arr.flatMap((item, index) => Array.from({ length: index + 1 }).fill(item));
 }
 
 /**
@@ -468,8 +466,7 @@ function sortCitiesArray(arr) {
 function getIdentityMatrix(size) {
   return Array.from({ length: size }, (_row, rowIndex) =>
     // eslint-disable-next-line implicit-arrow-linebreak
-    Array.from({ length: size }, (_col, colIndex) => +(rowIndex === colIndex))
-  );
+    Array.from({ length: size }, (_col, colIndex) => +(rowIndex === colIndex)));
 }
 
 /**
@@ -488,7 +485,7 @@ function getIdentityMatrix(size) {
 function getIntervalArray(start, end) {
   return Array.from(
     { length: end - start + 1 },
-    (value, index) => start + index
+    (value, index) => start + index,
   );
 }
 
